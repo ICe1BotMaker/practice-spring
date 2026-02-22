@@ -16,7 +16,7 @@ import com.example.demo.common.response.ErrorCode;
 
 @Service
 @RequiredArgsConstructor
-public class MemberService {
+public class AccountService {
     private final MemberRepository memberRepository;
     private final PasswordEncoder passwordEncoder;
     private final JwtUtil jwtUtil;

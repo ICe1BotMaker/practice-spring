@@ -7,25 +7,25 @@ import lombok.RequiredArgsConstructor;
 import com.example.demo.modules.account.dto.MemberResponse;
 import com.example.demo.modules.account.dto.SignupRequest;
 import com.example.demo.modules.account.security.UserDetailsImpl;
-import com.example.demo.modules.account.service.MemberService;
+import com.example.demo.modules.account.service.AccountService;
 import com.example.demo.common.exception.BusinessException;
 import com.example.demo.common.response.ApiResponse;
 import com.example.demo.common.response.ErrorCode;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api/account")
 @RequiredArgsConstructor
-public class AuthController {
-    private final MemberService memberService;
+public class AccountController {
+    private final AccountService accountService;
 
     @PostMapping("/signup")
     public ApiResponse<Object> signup(@RequestBody SignupRequest request) {
-        return memberService.signup(request);
+        return accountService.signup(request);
     }
 
     @PostMapping("/login")
     public ApiResponse<Object> login(@RequestBody SignupRequest request) {
-        return memberService.login(request);
+        return accountService.login(request);
     }
 
     @GetMapping("/")
@@ -33,6 +33,6 @@ public class AuthController {
         if (userDetails == null) {
             throw new BusinessException(ErrorCode.UNAUTHORIZED);
         }
-        return memberService.getMyPage(userDetails.getMember().getId());
+        return accountService.getMyPage(userDetails.getMember().getId());
     }
 }
