@@ -1,5 +1,5 @@
 ### 1. 회원가입 테스트
-POST http://localhost:8080/api/auth/signup
+POST http://localhost:8080/api/account/signup
 Content-Type: application/json
 
 {
@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 ### 2. 로그인 테스트
-POST http://localhost:8080/api/auth/login
+POST http://localhost:8080/api/account/login
 Content-Type: application/json
 
 {
@@ -17,5 +17,5 @@ Content-Type: application/json
 }
 
 ### 3. 마이페이지 테스트
-GET http://localhost:8080/api/auth/
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzcxNzg3NDU5LCJleHAiOjE3NzE3OTEwNTl9.qum9cXXHtcUc8EL8Eae2wbEsIYEBi3TfcXUyrGsvWOA
+GET http://localhost:8080/api/account/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzcxNzk2MzE2LCJleHAiOjE3NzE3OTk5MTZ9.-q1_eZQ6j-9N2do2QC8_YsuX6-n8fEz2iDRViSM2Skk
