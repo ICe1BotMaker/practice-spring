@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 
 import com.example.demo.modules.account.domain.Member;
 import com.example.demo.modules.account.domain.UserRole;
-import com.example.demo.modules.account.dto.MemberResponse;
 import com.example.demo.modules.account.dto.SignupRequest;
 import com.example.demo.modules.account.repository.MemberRepository;
 import com.example.demo.security.JwtUtil;
@@ -49,12 +48,5 @@ public class AccountService {
         }
 
         return ApiResponse.success(jwtUtil.createToken(member.getId()), "로그인에 성공하였습니다.");
-    }
-    
-    public ApiResponse<MemberResponse> getMyPage(Long memberId) {
-        Member member = memberRepository.findById(memberId)
-                .orElseThrow(() -> new BusinessException(ErrorCode.USER_NOT_FOUND));
-
-        return ApiResponse.success(MemberResponse.from(member), "조회에 성공하였습니다.");
     }
 }
