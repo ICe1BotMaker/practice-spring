@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.demo.modules.account.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
