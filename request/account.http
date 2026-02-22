@@ -15,3 +15,7 @@ Content-Type: application/json
     "username": "ice1",
     "password": "password123"
 }
+
+### 3. 마이페이지 테스트
+GET http://localhost:8080/api/auth/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzcxNzg3NDU5LCJleHAiOjE3NzE3OTEwNTl9.qum9cXXHtcUc8EL8Eae2wbEsIYEBi3TfcXUyrGsvWOA

@@ -11,11 +11,11 @@ public class ApiResponse<T> {
     private String message;
     private T data;
 
-    public static <T> ApiResponse<T> success(T data) {
+    public static <T> ApiResponse<T> success(T data, String message) {
         return ApiResponse.<T>builder()
                 .status(200)
                 .code("SUCCESS")
-                .message("요청에 성공하였습니다.")
+                .message(message)
                 .data(data)
                 .build();
     }
